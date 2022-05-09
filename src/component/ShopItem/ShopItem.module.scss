@@ -1,0 +1,18 @@
+.card {
+  width: 300px;
+  .cover {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  .rate {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .description {
+    font-size: 1.5rem;
+  }
+  .numberInput {
+    margin-bottom: 0.5rem;
+  }
+}
