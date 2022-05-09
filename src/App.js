@@ -7,7 +7,7 @@ import {
   AppstoreOutlined,
   SettingOutlined,
 } from '@ant-design/icons';
-import Demo1 from './pages';
+import { Demo1, Demo2 } from './pages';
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -22,10 +22,10 @@ function getItem(label, key, icon, children, type) {
 const items = [
   getItem('购物流程', 'sub1', <MailOutlined />, [
     getItem(
-      'Item 1',
+      '示例一',
       'g1',
       null,
-      [getItem('示例 1', 'demo1'), getItem('示例 2', 'demo2')],
+      [getItem('前台', 'demo1'), getItem('后台', 'demo2')],
       'group'
     ),
     getItem(
@@ -48,11 +48,8 @@ const items = [
 
 const pages = {
   demo1: <Demo1 />,
+  demo2: <Demo2 />,
 };
-
-function openSelectedPage({ item, key, keyPath, domEvent }) {
-  console.log({ item, key, keyPath, domEvent });
-}
 
 function App() {
   useEffect(() => {
@@ -60,6 +57,10 @@ function App() {
   });
 
   const [selectedPage, setSelectedPage] = useState('demo1');
+
+  const changeSelectedPage = ({ key }) => {
+    setSelectedPage(key);
+  };
 
   return (
     <div className={styles['App']}>
@@ -71,7 +72,7 @@ function App() {
         defaultOpenKeys={['sub1']}
         mode="inline"
         items={items}
-        onClick={openSelectedPage}
+        onClick={changeSelectedPage}
       />
       <div className={styles['active-page']}>{pages[selectedPage]}</div>
     </div>

@@ -1,5 +1,5 @@
 .card {
-  width: 300px;
+  width: 250px;
   .cover {
     width: 100%;
     height: auto;
@@ -12,7 +12,13 @@
   .description {
     font-size: 1.5rem;
   }
-  .numberInput {
-    margin-bottom: 0.5rem;
+  .numberContainer {
+    .numberLabel {
+      font-size: 1rem;
+      margin-right: 1rem;
+    }
+    .numberInput {
+      margin-bottom: 0.5rem;
+    }
   }
 }
