@@ -11,6 +11,7 @@ import {
 import styles from './ShopItem.module.scss';
 import * as localForage from 'localforage';
 import { nanoid } from 'nanoid';
+import { getCurrentTime } from '../../utils';
 
 const openNotification = (placement) => {
   notification.info({
@@ -23,23 +24,6 @@ const openNotification = (placement) => {
 var store = localForage.createInstance({
   name: 'demo1',
 });
-
-const getCurrentTime = () => {
-  let currentdate = new Date();
-  let datetime =
-    currentdate.getFullYear() +
-    '/' +
-    currentdate.getDate() +
-    '/' +
-    (currentdate.getMonth() + 1) +
-    ' ' +
-    currentdate.getHours() +
-    ':' +
-    currentdate.getMinutes() +
-    ':' +
-    currentdate.getSeconds();
-  return datetime;
-};
 
 export default function ShopItem({ title, imgUrl, prize }) {
   const [shopNumber, setShopNumber] = useState(1);

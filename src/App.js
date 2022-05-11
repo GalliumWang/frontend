@@ -7,7 +7,7 @@ import {
   AppstoreOutlined,
   SettingOutlined,
 } from '@ant-design/icons';
-import { Demo1, Demo2 } from './pages';
+import { Demo1, Demo2, Demo3, Demo4 } from './pages';
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -28,20 +28,23 @@ const items = [
       [getItem('前台', 'demo1'), getItem('后台', 'demo2')],
       'group'
     ),
+    getItem('示例二', 'g2', null, [getItem('订单状态', 'demo3')], 'group'),
   ]),
   getItem('审批系统', 'sub2', <AppstoreOutlined />, [
-    getItem('审批人审批', 'demo3'),
-    getItem('流程进度', 'demo4'),
+    getItem('审批人审批', 'demo111'),
+    getItem('流程进度', 'demo112'),
   ]),
   getItem('校园通行码系统', 'sub3', <AppstoreOutlined />, [
-    getItem('审批人审批', 'demo3'),
-    getItem('流程进度', 'demo4'),
+    getItem('审批人审批', 'demo113'),
+    getItem('流程进度', 'demo114'),
   ]),
 ];
 
 const pages = {
   demo1: <Demo1 />,
   demo2: <Demo2 />,
+  demo3: <Demo3 />,
+  demo4: <Demo4 />,
 };
 
 function App() {
