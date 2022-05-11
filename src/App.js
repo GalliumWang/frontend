@@ -28,21 +28,14 @@ const items = [
       [getItem('前台', 'demo1'), getItem('后台', 'demo2')],
       'group'
     ),
-    getItem(
-      'Item 2',
-      'g2',
-      null,
-      [getItem('Option 3', '3'), getItem('Option 4', '4')],
-      'group'
-    ),
   ]),
-  getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
-    getItem('Option 5', '5'),
-    getItem('Option 6', '6'),
-    getItem('Submenu', 'sub3', null, [
-      getItem('Option 7', '7'),
-      getItem('Option 8', '8'),
-    ]),
+  getItem('审批系统', 'sub2', <AppstoreOutlined />, [
+    getItem('审批人审批', 'demo3'),
+    getItem('流程进度', 'demo4'),
+  ]),
+  getItem('校园通行码系统', 'sub3', <AppstoreOutlined />, [
+    getItem('审批人审批', 'demo3'),
+    getItem('流程进度', 'demo4'),
   ]),
 ];
 
