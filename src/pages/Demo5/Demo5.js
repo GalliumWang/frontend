@@ -1,5 +1,5 @@
 import { React, useCallback, useEffect, useState, useRef } from 'react';
-import styles from './Demo4.module.scss';
+import styles from './Demo5.module.scss';
 import { Table, Tag, Space, Button, Result } from 'antd';
 import * as localForage from 'localforage';
 import { nanoid } from 'nanoid';
@@ -8,7 +8,7 @@ import G6 from '@antv/g6';
 import { tab } from '@testing-library/user-event/dist/tab';
 
 var store = localForage.createInstance({
-  name: 'demo4',
+  name: 'demo5',
 });
 
 const getItemList = async () => {
